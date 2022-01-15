@@ -1,0 +1,68 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+.top{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+li{
+    list-style: none;
+}
+
+.top h1{
+    border-bottom: 4px solid black;
+    color: black;
+}
+.top p{
+    color: black;
+}
+.inputs{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inputs input{
+    margin: 20px;
+}
+#email{
+    background: none;
+    width: 300px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+}
+#email:hover{
+    background: none;
+    outline: none;
+}
+input ,select,textarea{
+    font: bold;
+    font-size: 15px;
+    color: black;
+}
+.inputs button{
+    color: black;
+    background-color: transparent;
+    border: 2px solid black;
+    width: 90px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 100px;
+    top: 20px;
+}
+.inputs button:hover{
+    background-color: rgb(233, 173, 173);
+    color: black;
+}

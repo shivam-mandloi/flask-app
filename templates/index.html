@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo-project</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='index.css') }}">
+</head>
+
+<body>
+    <div class="cont">
+
+        <div>
+        <div class="header">
+            <h1>Forms</h1>
+        </div>
+            <a href="/logout" id="btn_log">logout</a>
+        </div>
+
+        <div class="box">
+            <div class = "index">
+            <form action="/search" method="POST">
+                <input type="text" placeholder="serach by form id" name="search" id="search">
+                <button type="submit" id="btn1">Submit</button>
+            </form>
+            </div>
+            
+            {% for item in data %}
+
+
+            <div class="list">
+                <div class="top">
+                    <div class="container">
+                    <h1>{{item[1]}}</h1>
+                    <h1>form id = {{item[0]}}</h1>
+                </div>
+                    <li>date:-{{item[2]}}</li>
+                    </div>
+                <div class="btn">
+                    {% if a == 0 %}
+                        <a href="/see/{{item[0]}}">see</a>
+                    {% endif %}
+                        <a href="/fillform/{{item[0]}}">fill form</a>
+                </div>
+            </div>
+
+            {% endfor %}
+
+            <a href="/create" id="add">Create form</a>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

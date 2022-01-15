@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo-project</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static',filename='add_todo.css') }}">
+</head>
+<body>
+
+    <form action="/create-form" class="form" method="POST">
+        <div class="box">
+            <li>This is message</li>
+            <input type="text" placeholder="title of the form" name="title">
+            <input type="text" placeholder="No of small placeholder" name="small">
+            <input type="text" placeholder="No of large placeholder" name="large">
+
+            <div class="star">
+                <h3>Add:-</h3>
+                <button type="submit" name="sub">click</button>
+            </div>
+            
+        </div>
+    </form>
+
+</body>
+</html>

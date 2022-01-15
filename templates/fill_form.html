@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo-project</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static',filename='add_todo.css') }}">
+</head>
+<body>
+    <form action="/submitform/{{small}}/{{large}}" class="form" method="POST">
+        <div class="box">
+            <li>{{msg}}</li>
+            {% for item in data %}
+                <li>{{item[0]}}</li>
+                <input type="text" placeholder="fill name which you want" name={{item[1]}}>
+            {% endfor %}
+
+            {% for item in data1 %}
+                <li>{{item[0]}}</li>
+                <textarea name="{{item[1]}}" id="" cols="30" rows="10" placeholder="Message"></textarea>
+            {% endfor %}
+
+            <div class="star">
+                <h3>Add:-</h3>
+                <button type="submit" name="sub">click</button>
+            </div>
+            
+        </div>
+    </form>
+
+</body>
+</html>

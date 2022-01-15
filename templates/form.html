@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo-project</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static',filename='add_todo.css') }}">
+</head>
+<body>
+    <form action="/create-new-form/{{small}}/{{large}}/{{title}}" class="form" method="POST">
+        <div class="box">
+            <li>Give name to field first small than large placeholder</li>
+            {% for item in data %}
+                <input type="text" placeholder="fill name which you want" name={{item}}>
+            {% endfor %}
+            <!-- <input type="text" placeholder="Last Name" name="lname"> -->
+
+            <div class="star">
+                <h3>Add:-</h3>
+                <button type="submit" name="sub">click</button>
+            </div>
+            
+        </div>
+    </form>
+
+</body>
+</html>
